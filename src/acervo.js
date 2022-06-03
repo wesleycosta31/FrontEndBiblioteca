@@ -1,23 +1,8 @@
-import './App.css'
-import './acervo.js'
-import { useEffect, useState } from 'react';
-import Livro from './componentes/Livro';
-
+import './App.js'
 function App() {
-
-const [livros, setLivros] = useState([])
-
-  useEffect(() =>{
-    fetch('http://localhost:3000/livros')
-      .then(resposta => resposta.json())
-      .then(dados => {
-        setLivros(dados)
-      })
-  }, [])
-
-  return (
-    <div className="App">
-           <header>
+    return (
+    <div>
+       <header>
             <nav className="navbar navbar-expand-sm navbar-light bg-light">
               <div className="container-fluid">
               <a className="navbar-brand" href="./App.js">Livraria Sebo Cultural</a>
@@ -36,10 +21,10 @@ const [livros, setLivros] = useState([])
                         <a className="nav-link" href="#">Literatura Brasileira</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="./acervo.js">Acervo Completo</a>
+                        <a className="nav-link" href="#">Acervo Completo</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Lista de desejos</a>
+                        <a className="nav-link" href="#">Litsta de desejos</a>
                     </li>
                   </ul>
                 
@@ -50,22 +35,17 @@ const [livros, setLivros] = useState([])
                   </div>
               </div>
              </nav>
-           </header>
-
-
-         <section className='prateleira'>
-          {livros.map(livro => 
-          (<Livro
-          key={livro.id} 
-          titulo={livro.titulo} 
-          autor={livro.autor} 
-          />))}
-
-        </section>  
-      </div>     
-      
-
+        </header>
+    <div>
+        <h2>
+            olaaaaaaaa
+        </h2>
+    </div>
+     
+    </div>
   );
 }
 
 export default App;
+
+    
