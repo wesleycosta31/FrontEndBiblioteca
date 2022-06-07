@@ -1,15 +1,11 @@
 const Livro = ({titulo, autor,}) => {
     return (
     <div>
-      <table className="table">
-    <thead>
-      <tr>
-        <th scope="col">Título <td scope="row">{titulo}</td></th>
-        <th scope="col">Autor    <td scope="row">{autor}</td></th>
-      </tr>
-    </thead>
-
-  </table>
+   
+        <tr scope="col">Titulo: {titulo}</tr>
+        <tr scope="col">Autor: {autor}</tr>
+    
+   
 
     </div>
     )
